@@ -1,0 +1,12 @@
+{
+  "name": "ameno-ipsum",
+  "version": "1.0.0",
+  "description": "Lorem Ipsum generator based on Era's music Ameno",
+  "main": "index.js",
+  "repository": "https://github.com/Teoble/ameno-ipsum",
+  "author": "Teoble",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.8.2"
+  }
+}
