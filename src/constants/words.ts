@@ -1,6 +1,4 @@
 export const WORDS = [
-    "dori",
-    "me",
     "interimo",
     "adapare",
     "ameno",
@@ -12,6 +10,11 @@ export const WORDS = [
     "matiro",
     "matiremo",
     "emulari",
+    "dori",
+    "me",
     "dore",
-    "dom"
+    "dom",
+    "reo",
+    "mea",
+    "am"
 ];

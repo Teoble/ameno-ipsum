@@ -56,7 +56,7 @@ describe('Ameno Ipsum', () => {
                 expect(ameno.generateParagraphs(0)).toEqual('');
             });
 
-            test('generate two paragraph', () => {
+            test('generate two paragraphs', () => {
                 expect(countPlainParagraphs(ameno.generateParagraphs(2))).toEqual(1);
             });
         });
@@ -76,7 +76,7 @@ describe('Ameno Ipsum', () => {
                 expect(ameno.generateParagraphs(0)).toEqual('');
             });
 
-            test('generate two paragraph', () => {
+            test('generate two paragraphs', () => {
                 expect(countHtmlParagraphs(ameno.generateParagraphs(2))).toEqual(2);
             });
         });
