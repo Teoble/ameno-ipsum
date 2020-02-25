@@ -1,4 +1,2 @@
-/packages/ameno-ipsum/node_modules
-/packages/ameno-ipsum/package-lock.json
-
-/packages/ameno-ipsum-site/node_modules
+/node_modules
+/dist
