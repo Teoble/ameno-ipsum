@@ -16,6 +16,6 @@
   },
   "scripts": {
     "build": "tsc --outDir dist",
-    "test": "jest"
+    "test": "jest --coverage"
   }
 }
