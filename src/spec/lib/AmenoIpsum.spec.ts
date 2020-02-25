@@ -38,4 +38,47 @@ describe('Ameno Ipsum', () => {
             expect(countPeriod(ameno.generateSentences(3))).toEqual(3);
         });
     });
+
+    describe('Sentences paragraphs', () => {
+
+        describe('Plain paragraph', () => {
+            const ameno = new AmenoIpsum('plain');
+
+            const countPlainParagraphs = (paragraph: string): number => {
+                return (paragraph.match(/\r\n|\r|\n/g) || []).length
+            };
+
+            test('generate one paragraph', () => {
+                expect(countPlainParagraphs(ameno.generateParagraphs(1))).toEqual(0);
+            });
+
+            test('generate empty paragraph', () => {
+                expect(ameno.generateParagraphs(0)).toEqual('');
+            });
+
+            test('generate two paragraph', () => {
+                expect(countPlainParagraphs(ameno.generateParagraphs(2))).toEqual(1);
+            });
+        });
+
+        describe('HTML paragraph', () => {
+            const ameno = new AmenoIpsum('html');
+
+            const countHtmlParagraphs = (paragraph: string): number => {
+                return (paragraph.match(/<p[^>]*>/g) || []).length
+            };
+
+            test('generate one paragraph', () => {
+                expect(countHtmlParagraphs(ameno.generateParagraphs(1))).toEqual(1);
+            });
+
+            test('generate empty paragraph', () => {
+                expect(ameno.generateParagraphs(0)).toEqual('');
+            });
+
+            test('generate two paragraph', () => {
+                expect(countHtmlParagraphs(ameno.generateParagraphs(2))).toEqual(2);
+            });
+        });
+    });
 });

@@ -4,8 +4,11 @@ import capitalizeFirstLetter from '../helper/CapitalizeHelper';
 class AmenoIpsum {
 
     constructor(
-        public minWordsPerSentence: number = 3,
-        public maxWordsPerSentence: number = 10,
+        private textFormat: 'plain' | 'html' = 'plain',
+        private minWordsPerSentence: number = 3,
+        private maxWordsPerSentence: number = 10,
+        private minSentencesPerParagraph: number = 3,
+        private maxSentencesPerParagraph: number = 7
     ) {
     }
 
@@ -43,6 +46,31 @@ class AmenoIpsum {
         }
         else
             return '';
+    }
+
+    /**
+     * Returns the quantity of the paragraphs from Ameno lyrics
+     * @param quantity number: Quantity of paragraphs
+     * @returns        string: return paragraphs based on the quantity passed
+     *
+     */
+    public generateParagraphs(quantity: number): string {
+        let paragraphs: string = '';
+        let paragraph: string;
+        quantity = Math.abs(quantity);
+        if(quantity){
+            for(let index=0;index < quantity; index++){
+                paragraph = this.paragraphFormat(this.generateSentences(randomInteger(this.minSentencesPerParagraph, this.maxSentencesPerParagraph)));
+                paragraphs = `${ paragraph }${ paragraphs }`;
+            }
+            return paragraphs.trim();
+        }
+        else
+            return '';
+    }
+
+    private paragraphFormat(paragraph: string): string {
+        return this.textFormat === 'html' ? `<p>${paragraph}</p>` : `${paragraph}\r\n`;
     }
 }
 
