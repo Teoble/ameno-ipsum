@@ -12,10 +12,12 @@
     "@types/node": "^13.7.4",
     "jest": "^25.1.0",
     "ts-jest": "^25.2.1",
+    "tslint": "^6.0.0",
     "typescript": "^3.8.2"
   },
   "scripts": {
     "build": "tsc --outDir dist",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint": "tslint -c tslint.json src/**/*.ts"
   }
 }

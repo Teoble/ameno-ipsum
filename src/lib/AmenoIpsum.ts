@@ -21,8 +21,8 @@ class AmenoIpsum {
     public generateWords(quantity: number): string {
         let words: string = '';
         quantity = Math.abs(quantity);
-        if(quantity){
-            for(let index=0;index < quantity; index++)
+        if (quantity) {
+            for (let index = 0; index < quantity; index++)
                 words = `${ randomWord() } ${ words }`;
             return capitalizeFirstLetter(words).trim();
         }
@@ -39,8 +39,8 @@ class AmenoIpsum {
     public generateSentences(quantity: number): string {
         let sentences: string = '';
         quantity = Math.abs(quantity);
-        if(quantity){
-            for(let index=0;index < quantity; index++)
+        if (quantity) {
+            for (let index = 0; index < quantity; index++)
                 sentences = `${ this.generateWords(randomInteger(this.minWordsPerSentence, this.maxWordsPerSentence)) }. ${ sentences }`;
             return sentences.trim();
         }
@@ -58,8 +58,8 @@ class AmenoIpsum {
         let paragraphs: string = '';
         let paragraph: string;
         quantity = Math.abs(quantity);
-        if(quantity){
-            for(let index=0;index < quantity; index++){
+        if (quantity) {
+            for (let index = 0; index < quantity; index++) {
                 paragraph = this.paragraphFormat(this.generateSentences(randomInteger(this.minSentencesPerParagraph, this.maxSentencesPerParagraph)));
                 paragraphs = `${ paragraph }${ paragraphs }`;
             }
