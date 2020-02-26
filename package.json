@@ -2,9 +2,12 @@
   "name": "ameno-ipsum",
   "version": "1.0.0",
   "description": "Lorem Ipsum generator based on Era's music Ameno",
-  "main": "index.js",
-  "repository": "https://github.com/Teoble/ameno-ipsum",
-  "author": "Teoble",
+  "main": "dist/index",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Teoble/ameno-ipsum.git"
+  },
+  "author": "Teoble (https://github.com/Teoble)",
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-typescript": "^7.8.3",
@@ -19,5 +22,9 @@
     "build": "tsc --outDir dist",
     "test": "jest --coverage",
     "lint": "tslint -c tslint.json src/**/*.ts"
+  },
+  "engines": {
+    "node": ">= 8.x",
+    "npm": ">= 5.x"
   }
 }
