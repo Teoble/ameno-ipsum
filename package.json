@@ -1,6 +1,6 @@
 {
   "name": "ameno-ipsum",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Lorem Ipsum generator based on Era's music Ameno",
   "main": "dist/index",
   "repository": {
