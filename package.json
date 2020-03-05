@@ -7,6 +7,14 @@
     "type": "git",
     "url": "git://github.com/Teoble/ameno-ipsum.git"
   },
+  "keywords": [
+    "lorem-ipsum", 
+    "generator",
+    "ameno",
+    "dorime",
+    "lorem",
+    "ipsum"
+  ],
   "author": "Teoble (https://github.com/Teoble)",
   "license": "MIT",
   "devDependencies": {
