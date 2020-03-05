@@ -37,3 +37,13 @@ In the object constructor you have the following properties:
 |generateParagraphs|quantity: number|
 
 ## Example of use
+
+```
+const AmenoIpsum = require('ameno-ipsum').AmenoIpsum;
+// import { AmenoIpsum } from 'ameno-ipsum';
+
+const amenoObject = new AmenoIpsum();
+console.log(amenoObject.generateWords(3));
+console.log(amenoObject.generateSentences(5));
+console.log(amenoObject.generateParagraphs(4));
+```
