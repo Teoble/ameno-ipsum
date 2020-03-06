@@ -15,7 +15,7 @@ yarn add ameno-ipsum
 
 #### Object creation
 
-To use it in your project you need to import the class `LoremIpsum` and create the object for the generation of the words, sentences or paragraphs.
+To use it in your project you need to import the class `AmenoIpsum` and create the object for the generation of the words, sentences or paragraphs.
 
 In the object constructor you have the following properties:
 
